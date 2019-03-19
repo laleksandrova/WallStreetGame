@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PlayerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Players">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="Image" Type="image" Nullable="false" />
+    <Property Name="Money" Type="money" Nullable="false" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Gold" Type="bigint" Nullable="false" />
+    <Property Name="Petrol" Type="bigint" Nullable="false" />
+    <Property Name="Antiques" Type="bigint" Nullable="false" />
+    <Property Name="Bitcoin" Type="bigint" Nullable="false" />
+    <Property Name="Shares" Type="bigint" Nullable="false" />
+    <Property Name="Technologies" Type="bigint" Nullable="false" />
+    <Property Name="Loan" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="PlayerModelStoreContainer">
+    <EntitySet Name="Players" EntityType="Self.Players" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

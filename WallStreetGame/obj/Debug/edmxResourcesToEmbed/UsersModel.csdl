@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UsersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Player">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="FullName" />
+      <PropertyRef Name="Username" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="Image" />
+      <PropertyRef Name="Money" />
+      <PropertyRef Name="Sex" />
+      <PropertyRef Name="Gold" />
+      <PropertyRef Name="Petrol" />
+      <PropertyRef Name="Antiques" />
+      <PropertyRef Name="Bitcoin" />
+      <PropertyRef Name="Shares" />
+      <PropertyRef Name="Technologies" />
+      <PropertyRef Name="Loan" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="Money" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Gold" Type="Int64" Nullable="false" />
+    <Property Name="Petrol" Type="Int64" Nullable="false" />
+    <Property Name="Antiques" Type="Int64" Nullable="false" />
+    <Property Name="Bitcoin" Type="Int64" Nullable="false" />
+    <Property Name="Shares" Type="Int64" Nullable="false" />
+    <Property Name="Technologies" Type="Int64" Nullable="false" />
+    <Property Name="Loan" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="UsersEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Players" EntityType="Self.Player" />
+  </EntityContainer>
+</Schema>

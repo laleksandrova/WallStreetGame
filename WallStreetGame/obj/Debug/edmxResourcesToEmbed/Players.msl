@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PlayerModelStoreContainer" CdmEntityContainer="PlayerEntities">
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="PlayerModel.Player">
+        <MappingFragment StoreEntitySet="Players">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Gold" ColumnName="Gold" />
+          <ScalarProperty Name="Petrol" ColumnName="Petrol" />
+          <ScalarProperty Name="Antiques" ColumnName="Antiques" />
+          <ScalarProperty Name="Bitcoin" ColumnName="Bitcoin" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="Technologies" ColumnName="Technologies" />
+          <ScalarProperty Name="Loan" ColumnName="Loan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UsersModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Users.dbo.Players' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Players">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="FullName" />
+      <PropertyRef Name="Username" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="Image" />
+      <PropertyRef Name="Money" />
+      <PropertyRef Name="Sex" />
+      <PropertyRef Name="Gold" />
+      <PropertyRef Name="Petrol" />
+      <PropertyRef Name="Antiques" />
+      <PropertyRef Name="Bitcoin" />
+      <PropertyRef Name="Shares" />
+      <PropertyRef Name="Technologies" />
+      <PropertyRef Name="Loan" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="Image" Type="image" Nullable="false" />
+    <Property Name="Money" Type="money" Nullable="false" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Gold" Type="bigint" Nullable="false" />
+    <Property Name="Petrol" Type="bigint" Nullable="false" />
+    <Property Name="Antiques" Type="bigint" Nullable="false" />
+    <Property Name="Bitcoin" Type="bigint" Nullable="false" />
+    <Property Name="Shares" Type="bigint" Nullable="false" />
+    <Property Name="Technologies" Type="bigint" Nullable="false" />
+    <Property Name="Loan" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="UsersModelStoreContainer">
+    <EntitySet Name="Players" EntityType="Self.Players" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Players].[Id] AS [Id], 
+    [Players].[FullName] AS [FullName], 
+    [Players].[Username] AS [Username], 
+    [Players].[Password] AS [Password], 
+    [Players].[Image] AS [Image], 
+    [Players].[Money] AS [Money], 
+    [Players].[Sex] AS [Sex], 
+    [Players].[Gold] AS [Gold], 
+    [Players].[Petrol] AS [Petrol], 
+    [Players].[Antiques] AS [Antiques], 
+    [Players].[Bitcoin] AS [Bitcoin], 
+    [Players].[Shares] AS [Shares], 
+    [Players].[Technologies] AS [Technologies], 
+    [Players].[Loan] AS [Loan]
+    FROM [dbo].[Players] AS [Players]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
